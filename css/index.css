@@ -58,6 +58,7 @@
 	background: #ffffff;
 	margin: 0 auto;
 		margin-bottom: 20px;
+	overflow: hidden;
 }
 .biaoti{
 	width: 1226px;
@@ -68,6 +69,11 @@
 	width: 1226px;
 	height: 58px;
 	background: #f5f5f5;
+}
+.danpin .tp{
+	width:3000px;
+	height:auto;
+    transition: all 0.5s;
 }
 .tupian{
 	width: 234px;
@@ -88,9 +94,24 @@
 .tp .tupian:nth-child(4){
 	border-top: 1px solid #e53935;
 }
+.tp .tupian:nth-child(5){
+	border-top: 1px solid #83c44e;
+}
+.tp .tupian:nth-child(6){
+	border-top: 1px solid #2196f3;
+}
+.tp .tupian:nth-child(7){
+	border-top: 1px solid #e53935;
+}
+.tp .tupian:nth-child(8){
+	border-top: 1px solid #83c44e;
+}
+.tp .tupian:nth-child(9){
+	border-top: 1px solid #2196f3;
+}
 .tp .tupian:last-child{
 	border-top: 1px solid #00c0a5;
-	margin-right: 0px;
+	margin-right: 0;
 }
 .danpin1{
 	width: 160px;
@@ -138,7 +159,7 @@
 	float: right;
 	margin-top: 23px;
 }
-.zuo{
+.fanye div{
 	width: 34px;
 	height: 24px;
 	border: 1px solid #e0e0e0;
@@ -146,19 +167,16 @@
 	background: #fafafa;
 	text-align: center;
 	color: #e0e0e2;
+	cursor: pointer;
 }
-.you{
-	width: 34px;
-	height: 24px;
-	border: 1px solid #e0e0e0;
+.fanye .right{
 	border-left: none;
-	float: right;
-	background: #fafafa;
-	text-align: center;
-	color: #b0b0b0;
-	display: block;
+
 }
-.you:hover{
+.fanye .activ{
+	color: #b0b0b0;
+}
+.fanye .activ:hover{
 	color: #ff6700;
 }
 .beijing{
@@ -800,9 +818,9 @@ border-right: 1px solid #b0b0b0;
 	width: 1226px;
 	height: 460px;
 	margin: 0 auto;
-	position: relative;
+	position: relative;	
 	margin-bottom: 14px;
-}
+	}
 .img_box{
 	width: 100%;
 	height: 100%;
@@ -827,11 +845,11 @@ border-right: 1px solid #b0b0b0;
 .img_box a{
 	display: block;
 	width: 100%;
-	height: 100%;
+    height: 100%;
 }
 .img_box a img{
 	width: 100%;
-	height: 100%;
+    height: 100%;
 }
 .aside{
 	width: 234px;
@@ -858,7 +876,7 @@ border-right: 1px solid #b0b0b0;
 	font-size: 12px;
 	color: #fff;
 	line-height: 42px;
-	margin-left: 29px;
+    margin-left: 29px;
 }
 .asideright{
 	float: right;
@@ -898,7 +916,7 @@ border-right: 1px solid #b0b0b0;
 .btn_box li:last-child{
 	margin-right: 0;
 }
-.banner .fanye a{
+.banner .banner_fanye div{
 	position: absolute;
 	top: 50%;
 	z-index: 999;
@@ -908,17 +926,17 @@ border-right: 1px solid #b0b0b0;
 	overflow: hidden;
 	background: url("../img/fanye.png")no-repeat -84px 50%;
 }
-.banner .fanye a.left{
+.banner .banner_fanye div.left{
 	left: 234px;
 }
-.banner .fanye a.left:hover{
+.banner .banner_fanye div.left:hover{
 	background: url("../img/fanye.png")no-repeat  ;
 }
-.banner .fanye a.right{
+.banner .banner_fanye div.right{
 	right: 0;
 	background: url("../img/fanye.png") no-repeat -125px 50%;
 }
-.banner .fanye a.right:hover{
+.banner .banner_fanye div.right:hover{
 	background: url("../img/fanye.png") no-repeat -43px 50%;
 }
 .xiaohezi{
@@ -1367,6 +1385,7 @@ border-right: 1px solid #b0b0b0;
     position: absolute;
     bottom: -80px;
     left: 0;
+
     width: 234px;
     height: 80px;
     overflow: hidden;
