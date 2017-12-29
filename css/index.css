@@ -799,20 +799,17 @@ border-right: 1px solid #b0b0b0;
 .banner{
 	width: 1226px;
 	height: 460px;
-	background: blue;
 	margin: 0 auto;
-	position: relative;	
+	position: relative;
 	margin-bottom: 14px;
-	}
+}
 .img_box{
 	width: 100%;
 	height: 100%;
-	background: black;
 }
 .img_box li{
 	width: 100%;
 	height: 100%;
-	background: green;
 }
 .img_box li{
 	width: 100%;
@@ -820,15 +817,21 @@ border-right: 1px solid #b0b0b0;
 	position: absolute;
 	top: 0;
 	left: 0;
+	transition: all 0.5s;
+	opacity: 0;
+}
+.img_box li.one{
+	z-index: 1;
+	opacity: 1;
 }
 .img_box a{
 	display: block;
 	width: 100%;
-    height: 100%;
+	height: 100%;
 }
 .img_box a img{
 	width: 100%;
-    height: 100%;
+	height: 100%;
 }
 .aside{
 	width: 234px;
@@ -838,6 +841,7 @@ border-right: 1px solid #b0b0b0;
 	top: 0;
 	left: 0;
 	background: rgba(0, 0, 0, 0.6);
+	z-index: 50;
 }
 .aside li{
 	width: 100%;
@@ -854,7 +858,7 @@ border-right: 1px solid #b0b0b0;
 	font-size: 12px;
 	color: #fff;
 	line-height: 42px;
-    margin-left: 29px;
+	margin-left: 29px;
 }
 .asideright{
 	float: right;
@@ -869,6 +873,7 @@ border-right: 1px solid #b0b0b0;
 	position: absolute;
 	right: 35px;
 	bottom: 25px;
+	z-index: 99;
 }
 .btn_box li{
 	width: 6px;
@@ -877,56 +882,44 @@ border-right: 1px solid #b0b0b0;
 	float: left;
 	margin-right: 10px;
 	border-radius: 50%;
-	border: 2px solid #b4b3b3;
-	background: rgba(0, 0, 0, 0.6)
+	border: 2px solid #fff;
+	background: rgba(0,0,0,0.4);
+	border-color: rgba(255,255,255,0.3);
+	cursor: pointer;
+}
+.btn_box li.one{
+	border-color: rgba(0,0,0,0.4);
+	background: rgba(255,255,255,0.4);
+}
+.btn_box li:hover{
+	border-color: rgba(0,0,0,0.4);
+	background: rgba(255,255,255,0.4);
 }
 .btn_box li:last-child{
 	margin-right: 0;
 }
-.btn_box li:first-child{
-	background: #fff;
-	border: 2px solid #959594;
-	background: rgba(0, 0, 0, 0.2)
-}
-.bannerleft{
+.banner .fanye a{
+	position: absolute;
+	top: 50%;
+	z-index: 999;
 	width: 41px;
 	height: 69px;
-	background: black;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	margin-bottom: auto;
-	margin-top: auto;
-	margin-left: 234px;
-	color: #d5d4d4;
-	font-size: 30px;
-	text-align: center;
-	line-height: 69px;
-	background: rgba(0, 0, 0, 0);
+	margin-top: -35px;
+	overflow: hidden;
+	background: url("../img/fanye.png")no-repeat -84px 50%;
 }
-.bannerright{
-	width: 41px;
-	height: 69px;
-	background: black;
-	background: rgba(0, 0, 0, 0);
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	margin-bottom: auto;
-	margin-top: auto;
+.banner .fanye a.left{
+	left: 234px;
+}
+.banner .fanye a.left:hover{
+	background: url("../img/fanye.png")no-repeat  ;
+}
+.banner .fanye a.right{
 	right: 0;
-	color: #d5d4d4;
-	font-size: 30px;
-	text-align: center;
-	line-height: 69px;
-}	
-.bannerleft:hover{
-	background: rgba(0, 0, 0, 0.6);
-	color: #fff;
+	background: url("../img/fanye.png") no-repeat -125px 50%;
 }
-.bannerright:hover{
-	background: rgba(0, 0, 0, 0.6);
-	color: #fff;
+.banner .fanye a.right:hover{
+	background: url("../img/fanye.png") no-repeat -43px 50%;
 }
 .xiaohezi{
 	width: 1226px;
@@ -1374,7 +1367,6 @@ border-right: 1px solid #b0b0b0;
     position: absolute;
     bottom: -80px;
     left: 0;
-    z-index: 3;
     width: 234px;
     height: 80px;
     overflow: hidden;
