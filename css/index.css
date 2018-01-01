@@ -116,7 +116,6 @@
 .danpin1{
 	width: 160px;
 	height: 160px;
-	background: red;
 	display: block;
     margin-left: 40px;
 	margin-top: 31px;
@@ -155,7 +154,6 @@
 .fanye{
 	width: 71px;
 	height: 24px;
-	background: red;
 	float: right;
 	margin-top: 23px;
 }
@@ -197,6 +195,7 @@
 	height: 58px;
 	background: #f5f5f5;
 	margin: 0 auto;
+	position: relative;
 }
 .dp{
 	width: 150px;
@@ -207,16 +206,19 @@
 	float: left;
 }
 .dpright{
-	width: 500px;
+	width: auto;
 	height: 58px;
 	float: right;
+	position: absolute;
+	right: 0;
 }
 .dpbiaoqian{
 	font-size: 	14px;
-	float: right;
+	float: left;
 	color: #424242;
 	margin-top: 22px;	
 	margin-left: 32px;
+	cursor: pointer;
 }
 .dibu2{
 	width: 1226px;
@@ -239,6 +241,7 @@
 	margin-bottom: 14px;
 		position: relative;
 	transition: 0.5s;
+	overflow: hidden;
 }
 .dapei .tupian2:hover{
     transform: translateY(-5px);
@@ -253,16 +256,15 @@
     box-shadow: 0 3px 10px 3px  rgba(0, 0, 0, 0.3)
 }
 .dapei .tupian2:hover .huang{
-	transform: translateY(-80px);
-	opacity: 1;
+	bottom: 0;
 }
 .youxia{
 	background: #f5f5f5;
+	overflow: visible;
 }
 .zhaopian{
 	width: 234px;
 	height: 200px;
-	background: blue;
 	margin: 0 auto;
 	display: block;
 }
@@ -363,6 +365,8 @@
     width: 992px;
     height: 614px;
     float: right;
+	display: none;
+	position: absolute;
 }
 .gouwuche{
 	width: 120px;
@@ -374,7 +378,6 @@
 .che{
 	width: 20px;
 	height: 14px;
-	background: purple;
 	margin-top: 14px;
 	margin-left: 16px;
     float: left;
@@ -431,7 +434,6 @@
 .logo{
 	width: 55px;
 	height: 55px;
-	background: black;
 	display: block;
 	float: left;
 }
@@ -564,11 +566,7 @@ border-right: 1px solid #b0b0b0;
     box-shadow: 0 3px 10px 3px  rgba(0, 0, 0, 0.3)
 }
 .zhoubiantp1{
-	width: 234px;
-	height: 300px;
-	background: #fff;
-	float: left;
-	transition: 0.5s;
+	margin-right: 0;
 }
 .zbpl{
 	font-size: 12px;
@@ -583,14 +581,14 @@ border-right: 1px solid #b0b0b0;
 	text-align: center;
 }	
 .zb{
-	width: 1226px;
+	width: 8000px;
 	height: 398px;
 	background: #f5f5f5;
+	transition: all 0.5s;
 }
 .rpcp{
 	width: 1226px;	
 	height: 473px;
-	background: blue;
 	margin: 0 auto;
 	margin-bottom: 20px;
 }
@@ -618,7 +616,6 @@ border-right: 1px solid #b0b0b0;
 	display: block;
 	width: 296px;
 	height: 220px;
-	background: red;
 }
 .rppl{
 	width: 236px;
@@ -662,7 +659,6 @@ border-right: 1px solid #b0b0b0;
 .neirong{
 	width: 1226px;
 	height: 478px;
-	background: blue;
 	margin: 0 auto;
 	margin-bottom: 20px;
 }
@@ -679,6 +675,8 @@ border-right: 1px solid #b0b0b0;
 	margin-right: 14px;
 	float: left;
 	transition: 0.5s;
+	position: relative;
+	overflow: hidden;
 }
 .nrdp:hover{
 	transform: translateY(-5px);
@@ -743,7 +741,6 @@ border-right: 1px solid #b0b0b0;
 	display: block;
 	width: 220px;
 	height: 166px;
-	background: blue;
 	margin: 0 auto;
 	margin-top: 16px;
 }
@@ -772,47 +769,68 @@ border-right: 1px solid #b0b0b0;
 .nr4{
 	color: #2196f3;
 }
-.diandian{
-	width: 112px;
-	height: 10px;
-	margin: 0 auto;
-	margin-top: 15px;
-}
-.diandian li{
-	width: 6px;
-	height: 6px;
-	background: #b0b0b0;
-	float: left;
-	margin-left: 28px;
-	border-radius: 50%;
-	margin-top: 2px;
-}
-.diandian li:first-child{
-	margin-left: 0;
-	border: 2px solid #ff6700;
-	background: #fff;
-	margin-top: 0;
-}
+
 .diandian1{
-	width: 78px;
+	width:auto;
 	height: 10px;
 	margin: 0 auto;
 	margin-top: 15px;
+	display: flex;
+	justify-content: center;
 }
 .diandian1 li{
 	width: 6px;
 	height: 6px;
 	background: #b0b0b0;
-	float: left;
-	margin-left: 28px;
 	border-radius: 50%;
 	margin-top: 2px;
+	border: 2px solid #fff;
+	margin-right: 9px;
+	margin-left: 9px;
 }
-.diandian1 li:first-child{
-	margin-left: 0;
-	border: 2px solid #ff6700;
+.diandian1 li.activ{
 	background: #fff;
-	margin-top: 0;
+	border: 2px solid #ff6700;
+}
+
+.nrdp .fan_ye{
+	width: 20px;
+	height: 24px;
+	padding: 12px 0;
+	font-size: 18px;
+	line-height: 24px;
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	opacity: 0;
+	transition: all .6s;
+	color: #fafafa;
+	background-color: rgba(66,66,66,0.2);
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+	z-index: 99;
+}
+.nrdp:hover .fan_ye{
+	opacity: 1;
+}
+.nrdp:hover .fan_ye:hover{
+	background-color: rgba(66,66,66,1);
+}
+.nrdp .fan_ye.left{
+	left: 0;
+}
+.nrdp .fan_ye.right{
+	right: 0;
+}
+div.big-box{
+	width: 3000px;
+	overflow: hidden;
+	transition: 0.5s;
+}
+div.box{
+	width: 296px;
+	float: left;
 }
 .banner{
 	width: 1226px;
@@ -1025,7 +1043,6 @@ border-right: 1px solid #b0b0b0;
 .hezi2{
 	width: 316px;
 	height: 170px;
-	background: greenyellow;
 	float: left;
 	margin-right: 14px;
 } 
@@ -1288,7 +1305,6 @@ border-right: 1px solid #b0b0b0;
 .logo2{
 	width: 56px;
 	height: 57px;
-	background: red;
 	float: left;
 }
 .logo2 img{
@@ -1357,7 +1373,6 @@ border-right: 1px solid #b0b0b0;
 	float: right;
 	width: 80px;
 	height: 32px;
-	background: black;
 	margin-left: 12px;
 }
 .dbright a img{
@@ -1385,14 +1400,11 @@ border-right: 1px solid #b0b0b0;
     position: absolute;
     bottom: -80px;
     left: 0;
-
     width: 234px;
     height: 80px;
-    overflow: hidden;
     font-size: 12px;
     background: #ff6700;
-    opacity: 0;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 .huang a{
 	display: block;
@@ -1411,4 +1423,19 @@ border-right: 1px solid #b0b0b0;
     white-space: nowrap;
     overflow: hidden;
     font-size: 12px;
+}
+.youhezi.active{
+	z-index: 99;
+	display: block;
+}
+.youhe-big{
+	width:992px;
+	height: 614px;
+	float: right;
+	position: relative;
+}
+.dpbiaoqian.active{
+	padding-bottom: 2px;
+	border-bottom: 2px solid #ff6700;
+	color: #ff6700
 }

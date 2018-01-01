@@ -1,3 +1,4 @@
+//轮播图
 {
     let box1=document.querySelectorAll(".img_box li");
     let box2=document.querySelectorAll(".btn_box li");
@@ -61,9 +62,12 @@
             })
     })
 }
+
+//明星单品
 {
-    let you=document.querySelector(".fanye .right");
-    let zuo=document.querySelector(".fanye .left");
+    let you=document.querySelector(".mingxing .fanye .right");
+    console.log(you)
+    let zuo=document.querySelector(".mingxing .fanye .left");
     let box=document.querySelector(".tp");
     you.onclick=function () {
         this.classList.remove("activ");
@@ -91,7 +95,102 @@
     box.onmouseout=function () {
         st=setInterval(danpinfn,5000)
     };
-
 }
 
+//搭配
+{
+    let lists = document.querySelectorAll(".dapei");
+    lists.forEach(function (ele) {
+        content(ele);
+    });
+    function content(context) {
+        let btn = context.querySelectorAll('.dpbiaoqian');
+        let box = context.querySelectorAll('.youhezi');
+        btn.forEach(function (ele, index) {
+            ele.onmouseover = function () {
+                for (let i = 0; i < box.length; i++) {
+                    btn[i].classList.remove('active');
+                    box[i].classList.remove('active')
 
+                }
+                this.classList.add('active');
+                box[index].classList.add('active');
+                n = index
+            }
+        })
+    }
+}
+
+//为你推荐
+{
+    let left=document.querySelector('.tuijian .fanye .left');
+    let right=document.querySelector('.tuijian .fanye .right');
+    let box1=document.querySelectorAll(".tuijian .zb .zhoubiantp");
+    let box2=document.querySelector(".tuijian .zb");
+    let n=0;
+    right.onclick=function(){
+        n++;
+        if(n>3){
+            n=3;
+            return;
+        }
+        yidong(n);
+    };
+    left.onclick=function(){
+        n--;
+        if(n<0){
+            n=0;
+            return;
+        }
+        yidong(n);
+    };
+    function yidong(n){
+        box2.style.marginLeft=-[n]*1226+"px";
+    };
+}
+
+// 内容
+{
+    let lists=document.querySelectorAll(".nrdp");
+    lists.forEach(function(ele){
+        content(ele);
+    });
+    function content(context){
+        let left=context.querySelector(".fan_ye.left");
+        let right=context.querySelector(".fan_ye.right");
+        let box1=context.querySelectorAll(".nrdp .box");
+        let box2=context.querySelector(".nrdp .big-box");
+        let btn=context.querySelectorAll(".diandian1 li");
+        let max=box1.length;
+        let n=0;
+        right.onclick=function(){
+            n++;
+            if(n>=max){
+                n=max-1;
+                return;
+            }
+            yidong(n);
+        };
+        left.onclick=function(){
+            n--;
+            if(n<0){
+                n=0;
+                return;
+            }
+            yidong(n);
+        };
+        btn.forEach(function(ele,index){
+            ele.onclick=function(){
+                yidong(index);
+                n=index;
+            };
+        });
+        function yidong(n){
+            for(let i=0;i<btn.length;i++){
+                btn[i].classList.remove("activ");
+            }
+            btn[n].classList.add("activ");
+            box2.style.marginLeft=-[n]*296+"px";
+        };
+    }
+}
