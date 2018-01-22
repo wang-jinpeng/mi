@@ -66,7 +66,7 @@
 //明星单品
 {
     let you=document.querySelector(".mingxing .fanye .right");
-    console.log(you)
+    console.log(you);
     let zuo=document.querySelector(".mingxing .fanye .left");
     let box=document.querySelector(".tp");
     you.onclick=function () {
@@ -191,6 +191,7 @@
             }
             btn[n].classList.add("activ");
             box2.style.marginLeft=-[n]*296+"px";
-        };
+        }
     }
 }
+
